@@ -21,6 +21,25 @@ public class StdUtils {
         StdOut.println();
     }
 
+    public static void printArr(boolean[][] arr, int m, int n, String t, String f){
+        // 打印第一行：标题
+        StdOut.printf(" \t");
+        for (int i = 0; i < n; i++) {
+            StdOut.printf("%d\t", i);
+        }
+        StdOut.println();
+
+        for (int i = 0; i < m; i++) {
+            // 打印第一列：标题
+            StdOut.printf("%d\t", i);
+
+            for (int j = 0; j < n; j++) {
+                StdOut.printf("%s\t", arr[i][j] ? t : f);
+            }
+            StdOut.println();
+        }
+    }
+
     public static int[] getSortedIntArr(int len){
         int[] arr = new int[len];
         for (int i = 0; i < len; i++) {
